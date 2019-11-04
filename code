@@ -1,0 +1,118 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+
+using namespace std;
+
+string F_name, L_name;
+
+string answer_1, answer_2, answer_3;
+
+int check_1, check_2, check_3, check_t;
+
+
+void Break() {
+
+	cout << "****************************************************************" << endl;
+}
+
+int main() {
+
+
+	cout << "Welcome to our online Banking Loan" << endl;
+
+	cout << "The amount you are given are base solely off your answers" << endl;
+
+	Break();
+
+	cout << "Please enter your first name:";
+	cin >> F_name;
+
+	cout << "Please enter your last name:";
+	cin >> L_name;
+
+	Break();
+
+	cout << "We are happy you have decided do business with us " << F_name << " " << L_name << "!" << endl;
+	cout << "All question can be answered with a Yes or No" << endl;
+
+	do {
+		cout << "Question 1: The Question" << endl;
+		cin >> answer_1;
+
+		if (answer_1 == "yes") {
+
+			check_1 = 1;
+
+		}
+		else {
+			check_1 = 0;
+		}
+	} while (answer_1 != "yes" && answer_1 != "no");
+
+	Break();
+
+	do {
+		cout << "Queston 2: The Question" << endl;
+		cin >> answer_2;
+		if (answer_2 == "yes" ) {
+
+			check_2 = 1;
+		}
+		else {
+			check_2 = 0;
+		}
+	} while (answer_2 != "yes" && answer_2 != "no");
+
+	Break();
+
+	do {
+		cout << "Question 3: The Question" << endl;
+		cin >> answer_3;
+		if (answer_3 == "yes") {
+			check_3 = 1;
+		}
+		else {
+			check_3 = 0;
+		}
+
+
+	} while (answer_3 != "yes" && answer_3 != "no");
+
+
+	Break();
+	
+	check_t = check_1 + check_2 + check_3 ;
+
+	
+
+	if (check_t == 3) {
+		Break();
+		cout << "Congratulation!! You are awarded $3,0000 " << F_name << " " << L_name << endl;
+		cout << "Thank you for using our service" << endl;
+		Break();
+
+	}
+	else if (check_t == 2) {
+		Break();
+		cout << "Congratulation!! You are awarded $2,0000 " << F_name << " " << L_name << endl;
+		cout << "Thank you for using our service" << endl;
+		Break();
+	}
+	else if (check_t == 1) {
+		Break();
+		cout << "Congratulation!! You are awarded $1,0000 " << F_name << " " << L_name << endl;
+		cout << "Thank you for using our service" << endl;
+		Break();
+	}
+	else {
+		Break();
+		cout << "Unfortunately! Base of your answers, we cannot award you a loan today " << F_name << " " << L_name << endl;
+		cout << "Thank You for using our service" << endl;
+		Break();
+	}
+	
+	system("pause");
+	return 0;
+};
